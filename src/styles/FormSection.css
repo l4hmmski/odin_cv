@@ -1,0 +1,175 @@
+.form-section {
+  padding: 32px;
+
+  border: 1px solid var(--border);
+  border-radius: 16px;
+
+  background-color: var(--white);
+
+  box-shadow:
+    0 10px 30px
+    rgba(0, 0, 0, 0.04);
+}
+
+.section-header {
+  margin-bottom: 28px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.section-number {
+  margin: 0 0 6px;
+
+  color: #789c19;
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.section-header h2 {
+  margin: 0;
+
+  font-size: 28px;
+  letter-spacing: -1px;
+}
+
+.form-grid {
+  margin-bottom: 26px;
+
+  display: grid;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+.form-field {
+  display: grid;
+  gap: 8px;
+}
+
+.form-field span {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+
+  padding: 13px 14px;
+
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  outline: none;
+
+  color: var(--black);
+  background-color: #fafafa;
+
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  border-color: #8bad27;
+
+  box-shadow:
+    0 0 0 4px
+    rgba(199, 255, 61, 0.2);
+}
+
+.form-field textarea {
+  resize: vertical;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+.primary-button,
+.secondary-button {
+  min-height: 44px;
+  padding: 0 18px;
+
+  border-radius: 7px;
+
+  font-weight: 700;
+
+  transition:
+    background-color 0.2s,
+    transform 0.2s;
+}
+
+.primary-button {
+  border: none;
+
+  color: var(--black);
+  background-color: var(--highlight);
+}
+
+.primary-button:hover {
+  background-color:
+    var(--highlight-dark);
+
+  transform: translateY(-2px);
+}
+
+.secondary-button {
+  border: 1px solid var(--black);
+
+  color: var(--black);
+  background-color: transparent;
+}
+
+.secondary-button:hover {
+  color: var(--white);
+  background-color: var(--black);
+}
+
+.submitted-content {
+  padding: 22px;
+
+  border-left:
+    4px solid var(--highlight);
+
+  background-color: #f7f8f5;
+}
+
+.submitted-content h3 {
+  margin: 0 0 10px;
+
+  font-size: 23px;
+}
+
+.submitted-content p {
+  margin: 7px 0;
+
+  color: #4f545a;
+}
+
+.submitted-content .date {
+  color: #7c8188;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .form-section {
+    padding: 22px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .full-width {
+    grid-column: auto;
+  }
+}

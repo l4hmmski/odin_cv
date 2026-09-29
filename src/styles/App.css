@@ -1,0 +1,101 @@
+:root {
+  --black: #121212;
+  --white: #ffffff;
+  --background: #f2f3f5;
+  --border: #d9dce1;
+  --muted: #666b73;
+  --highlight: #c7ff3d;
+  --highlight-dark: #acd926;
+}
+
+.app {
+  min-height: 100vh;
+
+  color: var(--black);
+  background-color: var(--background);
+}
+
+.container {
+  width: min(
+    100% - 40px,
+    900px
+  );
+
+  margin-inline: auto;
+}
+
+.page-header {
+  padding: 90px 0 70px;
+
+  color: var(--white);
+  background-color: var(--black);
+}
+
+.eyebrow {
+  margin: 0 0 14px;
+
+  color: var(--highlight);
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.page-header h1 {
+  max-width: 700px;
+
+  margin: 0;
+
+  font-size: clamp(
+    44px,
+    8vw,
+    75px
+  );
+
+  line-height: 0.98;
+  letter-spacing: -4px;
+}
+
+.introduction {
+  max-width: 620px;
+
+  margin: 24px 0 0;
+
+  color: #b8b8b8;
+
+  font-size: 18px;
+}
+
+.sections {
+  padding-block: 50px;
+
+  display: grid;
+  gap: 24px;
+}
+
+.page-footer {
+  padding: 30px 0;
+
+  color: #9a9a9a;
+  background-color: var(--black);
+
+  font-size: 13px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: min(
+      100% - 28px,
+      900px
+    );
+  }
+
+  .page-header {
+    padding: 65px 0 50px;
+  }
+
+  .page-header h1 {
+    letter-spacing: -2px;
+  }
+}
